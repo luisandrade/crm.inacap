@@ -9,6 +9,7 @@ class usuario{
         if($resultado = $objetoMYSQL->query($consultaSql)){
             if($objetoMYSQL->affected_rows>0){
                 $i=0;
+                // se llaman a todos los usuarios de la ta
                 while($fila = $resultado->fetch_assoc()){
                     $arreglo[$i]=array($fila['rut_usuario'],$fila['nombres'],$fila['apellidos']);
                     $i++;
